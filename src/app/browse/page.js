@@ -1,9 +1,12 @@
+import React from 'react'
 import Navbar from "@/components/Navbar";
-import "./globals.css";
-export default function Home() {
+function Browse() {
   return (
     <div>
       <Navbar/>
+      Browse page
     </div>
-  );
+  )
 }
+
+export default Browse

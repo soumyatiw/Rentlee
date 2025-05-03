@@ -1,0 +1,103 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+  }
+  
+  .navContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logoBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  
+  .brand {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #5C5C99, #A3A3CC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+  }
+  
+  .brand span {
+    background: linear-gradient(90deg, #292966, #CCCCFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .links {
+    display: flex;
+    gap: 26px;
+    list-style: none;
+  }
+  
+  .links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+  }
+  
+  .links li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #5C5C99;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .links li a:hover::after {
+    width: 100%;
+  }
+  
+  .auth {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .dotBtn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 1.5px solid #5C5C99;
+    background: transparent;
+    color: #5C5C99;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .dotBtn:hover {
+    background-color: #CCCCFF;
+  }
+  
+  .filled {
+    background-color: #5C5C99;
+    color: white;
+    border: none;
+  }
+  
+  .filled:hover {
+    background-color: #292966;
+  }
+  

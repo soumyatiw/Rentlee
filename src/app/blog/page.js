@@ -1,9 +1,13 @@
+import React from 'react'
 import Navbar from "@/components/Navbar";
-import "./globals.css";
-export default function Home() {
+
+function Blog() {
   return (
     <div>
       <Navbar/>
+      Blog Page
     </div>
-  );
+  )
 }
+
+export default Blog
