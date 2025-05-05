@@ -1,0 +1,140 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 100px;
+    background: linear-gradient(120deg, #292966, #5C5C99, #A3A3CC);
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: #fff;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+  }
+  
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  .left {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .title {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .title span {
+    color: #CCCCFF;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #f9f9ff;
+  }
+  
+  .searchBox {
+    display: flex;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    overflow: hidden;
+    max-width: 500px;
+    margin-bottom: 25px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .searchBox input {
+    flex: 1;
+    padding: 14px 20px;
+    background: transparent;
+    border: none;
+    color: #292966;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .searchBox input::placeholder {
+    color: #5C5C99;
+    padding-left: 8px; 
+  }
+  
+  .searchBox button {
+    background-color: #292966;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .searchBox button:hover {
+    background-color: #1f1f4b;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  .tags span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .heroImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    position: absolute;
+    left: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #5C5C99;
+    pointer-events: none; /* So it doesn't block clicks */
+  }
+  

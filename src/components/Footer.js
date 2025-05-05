@@ -1,6 +1,6 @@
-
 import styles from './Footer.module.css';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
           <p>Making renting simple, transparent, and stress-free since 2020.</p>
           <div className={styles.socialIcons}>
             <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaTwitter /></a>
+            <a href="#"><FaXTwitter /></a>
             <a href="#"><FaInstagram /></a>
             <a href="#"><FaLinkedinIn /></a>
           </div>
@@ -39,9 +39,9 @@ export default function Footer() {
           <div>
             <h4>Contact</h4>
             <ul>
-              <li>2329 Rentlee Town, Karol Bagh, Delhi 110094</li>
-              <li>rentfromrentlee@gmail.com</li>
-              <li>+91 7495042431</li>
+              <li><FaMapMarkerAlt style={{ marginRight: '8px' }} />2329 Rentlee Town, Karol Bagh, Delhi 110094</li>
+              <li><FaEnvelope style={{ marginRight: '8px' }} />rentfromrentlee@gmail.com</li>
+              <li><FaPhoneAlt style={{ marginRight: '8px' }} />+91 7495042431</li>
             </ul>
           </div>
         </div>

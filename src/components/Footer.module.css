@@ -11,7 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
+    gap: 100px;
   }
   
   .brandSection {
@@ -88,6 +88,8 @@
     margin-top: 8px;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .policies a {
@@ -98,5 +100,29 @@
   
   .policies a:hover {
     color: #A3A3CC;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .linkSections {
+        flex-direction: column;
+        gap: 30px;
+    }
+  
+    .newsletter input {
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+  
+    .newsletter button {
+        width: 100%;
+        border-radius: 6px;
+    }
   }
   

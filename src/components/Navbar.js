@@ -1,9 +1,25 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import styles from './Navbar.module.css';
 import logo from '@/assets/Logo.png';
 
 export default function Navbar() {
+  const [currentPath, setCurrentPath] = useState('');
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
+
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Browse', path: '/browse' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'About Us', path: '/about' }
+  ];
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
@@ -13,10 +29,16 @@ export default function Navbar() {
         </Link>
 
         <ul className={styles.links}>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/browse">Browse</Link></li>
-          <li><Link href="/blog">Blog</Link></li>
-          <li><Link href="/about">About Us</Link></li>
+          {navLinks.map(link => (
+            <li key={link.name}>
+              <Link
+                href={link.path}
+                className={`${styles.link} ${currentPath === link.path ? styles.active : ''}`}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         <div className={styles.auth}>
