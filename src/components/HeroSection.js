@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './HeroSection.module.css';
-// import heroImage from '@/assets/hero-image.png';
+import heroImage from '@/assets/hero-image.png';
 import { FaCheckCircle, FaLock, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function HeroSection() {
@@ -28,7 +28,7 @@ export default function HeroSection() {
       </div>
 
       <div className={styles.right}>
-        {/* <Image src={heroImage} alt="Hero" className={styles.heroImage} /> */}
+        <Image data-aos="fade-up" data-aos-duration="2000" src={heroImage} alt="Hero" className={styles.heroImage} />
       </div>
     </section>
   );

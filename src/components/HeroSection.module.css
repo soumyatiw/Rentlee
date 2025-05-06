@@ -75,11 +75,11 @@
     color: #292966;
     font-size: 16px;
     outline: none;
+    padding-left: 35px;
   }
   
   .searchBox input::placeholder {
     color: #5C5C99;
-    padding-left: 8px; 
   }
   
   .searchBox button {
