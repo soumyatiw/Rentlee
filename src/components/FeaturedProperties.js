@@ -1,7 +1,8 @@
 import styles from './FeaturedProperties.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import properties from '@/data/main_data.json';
-import { FaMapMarkerAlt, FaBed, FaBath ,FaRulerCombined} from 'react-icons/fa';
+import { FaMapMarkerAlt, FaBed, FaBath, FaRulerCombined } from 'react-icons/fa';
 
 const FeaturedProperties = () => {
     const featured = properties.slice(0, 3);
@@ -11,13 +12,13 @@ const FeaturedProperties = () => {
             <h2 className={styles.heading}>Featured Properties</h2>
             <p className={styles.subheading}>Discover our handpicked rentals available right now</p>
 
-            <div className={styles.grid}>
+            <div className={styles.grid} data-aos="fade-up" data-aos-duration="2000">
                 {featured.map((property) => (
                     <div className={styles.card} key={property.id}>
                         <img src={property.image_url} alt={property.title} className={styles.image} />
                         <div className={styles.details}>
                             <h3>{property.title}</h3>
-                            <p className={styles.meta}><FaMapMarkerAlt className={styles.icon}/> {property.city}, {property.state}</p>
+                            <p className={styles.meta}><FaMapMarkerAlt className={styles.icon} /> {property.city}, {property.state}</p>
                             <div className={styles.specs}>
                                 <div className={styles.specItem}>
                                     <FaBed className={styles.icon} />
@@ -40,6 +41,9 @@ const FeaturedProperties = () => {
                     </div>
                 ))}
             </div>
+            <Link href="/browse" className={styles.browseAllBtn}>
+                Browse All Properties
+            </Link>
         </section>
     );
 };

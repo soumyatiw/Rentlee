@@ -95,4 +95,20 @@
   .viewBtn:hover {
     background-color: #292966;
   }
+  .browseAllBtn {
+    display: inline-block;
+    margin-top: 40px;
+    background-color: #40408b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .browseAllBtn:hover {
+    background-color: #1e1e4f;
+  }
   
