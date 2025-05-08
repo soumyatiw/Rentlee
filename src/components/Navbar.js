@@ -7,24 +7,23 @@ import styles from './Navbar.module.css';
 import logo from '@/assets/Logo.png';
 
 export default function Navbar() {
-    const [currentPath, setCurrentPath] = useState('');
-
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [currentPath, setCurrentPath] = useState('/');
+  
     useEffect(() => {
-        setCurrentPath(window.location.pathname);
+      setCurrentPath(window.location.pathname);
     }, []);
-
-    const navLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'Browse', path: '/browse' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'About Us', path: '/about' }
-    ];
-
+  
     const toggleMenu = () => {
-        const nav = document.querySelector(`.${styles.links}`);
-        nav.classList.toggle(styles.show);
+      setIsMenuOpen(prev => !prev);
     };
-
+  
+    const navLinks = [
+      { name: 'Home', path: '/' },
+      { name: 'Browse', path: '/browse' },
+      { name: 'Blog', path: '/blog' },
+      { name: 'About Us', path: '/about' }
+    ];
     return (
         <nav className={styles.navbar}>
             <div className={styles.navContainer}>
@@ -33,7 +32,7 @@ export default function Navbar() {
                     <span className={styles.brand}>Rent<span>lee</span></span>
                 </Link>
 
-                <ul className={styles.links}>
+                <ul className={`${styles.links} ${isMenuOpen ? styles.show : ''}`}>
                     {navLinks.map(link => (
                         <li key={link.name}>
                             <Link
