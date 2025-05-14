@@ -28,7 +28,8 @@
 .brand {
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(90deg, #5C5C99, #A3A3CC);
+  background: linear-gradient(90deg, #505097, #A3A3CC);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
