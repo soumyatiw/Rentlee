@@ -6,24 +6,39 @@ import { useEffect, useState } from 'react';
 import styles from './Navbar.module.css';
 import logo from '@/assets/Logo.png';
 
+import useAuth from '@/hooks/useAuth';
+import { signOut } from 'firebase/auth';
+import { auth } from '@/firebase/config';
+import { useRouter } from 'next/navigation';
+
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [currentPath, setCurrentPath] = useState('/');
-  
+    const user = useAuth();
+    const router = useRouter();
+
     useEffect(() => {
       setCurrentPath(window.location.pathname);
     }, []);
-  
+
     const toggleMenu = () => {
       setIsMenuOpen(prev => !prev);
     };
-  
+
+    const handleLogout = async () => {
+      await signOut(auth);
+      router.refresh();
+    };
+
     const navLinks = [
       { name: 'Home', path: '/' },
       { name: 'Browse', path: '/browse' },
       { name: 'Blog', path: '/blog' },
       { name: 'About Us', path: '/about' }
     ];
+
+    const firstLetter = user?.username?.charAt(0)?.toUpperCase() || user?.email?.charAt(0)?.toUpperCase();
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.navContainer}>
@@ -45,14 +60,26 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                <div className={styles.auth}>
+                {user ? (
+                  <div className={styles.userMenu}>
+                    <div className={styles.avatar}>
+                      {firstLetter}
+                      <div className={styles.dropdown}>
+                        <Link href="/profile">Settings</Link>
+                        <button onClick={handleLogout}>Logout</button>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className={styles.auth}>
                     <Link href="/login">
                         <button className={styles.dotBtn}>Login</button>
                     </Link>
                     <Link href="/signup">
                         <button className={`${styles.dotBtn} ${styles.filled}`}>Sign Up</button>
                     </Link>
-                </div>
+                  </div>
+                )}
 
                 <button className={styles.hamburger} onClick={toggleMenu}>
                     <span></span>

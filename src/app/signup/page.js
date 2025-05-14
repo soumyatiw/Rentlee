@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/firebase/config';
+import { auth, db } from '@/firebase/config';
+import { doc, setDoc } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
 import styles from './Signup.module.css';
 
@@ -23,7 +24,15 @@ export default function SignupPage() {
     }
 
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const result = await createUserWithEmailAndPassword(auth, email, password);
+
+      // ✅ Save user info to Firestore
+      await setDoc(doc(db, 'users', result.user.uid), {
+        fullName: name,
+        username: username,
+        email: email
+      });
+
       alert('Signup successful!');
       router.push('/');
     } catch (error) {
