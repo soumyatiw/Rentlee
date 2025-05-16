@@ -17,6 +17,7 @@ export default function LoginPage() {
       await signInWithEmailAndPassword(auth, email, password);
       alert('Login successful!');
       router.push('/');
+      router.refresh();
     } catch (error) {
       alert(error.message);
     }

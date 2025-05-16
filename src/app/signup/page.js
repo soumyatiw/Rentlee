@@ -35,6 +35,7 @@ export default function SignupPage() {
 
       alert('Signup successful!');
       router.push('/');
+      router.refresh();
     } catch (error) {
       alert(error.message);
     }
