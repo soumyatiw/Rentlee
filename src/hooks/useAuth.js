@@ -1,3 +1,4 @@
+// src/hooks/useAuth.js
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -7,14 +8,12 @@ import { auth, db } from '@/firebase/config';
 
 export default function useAuth() {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser) {
-        // show user instantly with fallback firstLetter
         setUser(firebaseUser);
-
-        // now try to fetch username
         try {
           const ref = doc(db, 'users', firebaseUser.uid);
           const snap = await getDoc(ref);
@@ -23,15 +22,16 @@ export default function useAuth() {
             setUser({ ...firebaseUser, username: data.username || '' });
           }
         } catch (err) {
-          console.warn('⚠️ Firestore unavailable, skipping username fetch.', err.message);
+          console.warn('⚠️ Firestore offline, skipping username fetch.', err.message);
         }
       } else {
         setUser(null);
       }
+      setLoading(false);
     });
 
     return () => unsubscribe();
   }, []);
 
-  return user;
+  return { user, loading };
 }

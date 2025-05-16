@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import useAuth from '@/hooks/useAuth';
+import GlobalLoader from '@/components/GlobalLoader';
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -23,6 +25,8 @@ export const Metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const { loading } = useAuth();
+  
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -30,7 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        {loading ? <GlobalLoader /> : children}
       </body>
     </html>
   );

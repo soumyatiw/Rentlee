@@ -1,3 +1,5 @@
+// Final step: Navbar dropdown toggle logic (add to Navbar.jsx)
+
 'use client';
 
 import Link from 'next/link';
@@ -14,8 +16,9 @@ import { auth } from '@/firebase/config';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState('/');
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const router = useRouter();
-  const user = useAuth();
+  const { user, loading } = useAuth();
 
   useEffect(() => {
     setCurrentPath(window.location.pathname);
@@ -42,6 +45,8 @@ export default function Navbar() {
     user?.username?.[0]?.toUpperCase() ||
     user?.email?.[0]?.toUpperCase();
 
+  if (loading) return null;
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
@@ -65,13 +70,17 @@ export default function Navbar() {
 
         {user ? (
           <div className={styles.userMenu}>
-            <div className={styles.avatar}>
+            <div className={styles.avatar} onClick={() => setDropdownOpen(prev => !prev)}>
               {firstLetter}
+            </div>
+
+            {dropdownOpen && (
               <div className={styles.dropdown}>
                 <Link href="/profile">Settings</Link>
                 <button onClick={handleLogout}>Logout</button>
               </div>
-            </div>
+            )}
+
           </div>
         ) : (
           <div className={styles.auth}>
@@ -79,9 +88,7 @@ export default function Navbar() {
               <button className={styles.dotBtn}>Login</button>
             </Link>
             <Link href="/signup">
-              <button className={`${styles.dotBtn} ${styles.filled}`}>
-                Sign Up
-              </button>
+              <button className={`${styles.dotBtn} ${styles.filled}`}>Sign Up</button>
             </Link>
           </div>
         )}
