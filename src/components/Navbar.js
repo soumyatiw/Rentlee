@@ -45,7 +45,26 @@ export default function Navbar() {
     user?.username?.[0]?.toUpperCase() ||
     user?.email?.[0]?.toUpperCase();
 
-  if (loading) return null;
+  if (loading) {
+    return (
+      <div style={{
+        height: '64px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: 'white'
+      }}>
+        <div style={{
+          width: '20px',
+          height: '20px',
+          border: '3px solid #5C5C99',
+          borderTopColor: 'transparent',
+          borderRadius: '50%',
+          animation: 'spin 0.6s linear infinite'
+        }}></div>
+      </div>
+    );
+  }
 
   return (
     <nav className={styles.navbar}>
