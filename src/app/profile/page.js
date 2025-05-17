@@ -20,32 +20,51 @@ export default function ProfilePage() {
   });
 
   useEffect(() => {
-    const loadProfile = async () => {
-      if (user) {
-        const ref = doc(db, 'users', user.uid);
-        const snap = await getDoc(ref);
-        if (snap.exists()) {
-          setFormData(snap.data());
-        }
+  const loadProfile = async () => {
+    if (!user || !user.uid || !db) return; // 💥 avoid running when not ready
+
+    try {
+      const ref = doc(db, 'users', user.uid);
+      const snap = await getDoc(ref);
+      if (snap.exists()) {
+        setFormData(snap.data());
       }
-    };
-    loadProfile();
-  }, [user]);
+    } catch (err) {
+      console.error('Failed to load user profile:', err.message);
+    }
+  };
+
+  loadProfile();
+}, [user, db]);
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSave = async (e) => {
-    e.preventDefault();
-    if (user) {
-      const ref = doc(db, 'users', user.uid);
-      await setDoc(ref, formData);
-      alert('Profile updated!');
-    }
-  };
+  e.preventDefault();
+
+  const uid = user?.uid || auth.currentUser?.uid;
+
+  if (!uid) {
+    alert('User not ready yet. Please wait a moment.');
+    return;
+  }
+
+  try {
+    const ref = doc(db, 'users', uid);
+    await setDoc(ref, formData);
+    alert('Profile updated!');
+  } catch (err) {
+    console.error('Failed to save profile:', err.message);
+    alert('Failed to update profile.');
+  }
+};
+
 
   return (
+    <div className={styles.profileContainer}>
     <div className={styles.container}>
       <h1 className={styles.heading}>User Profile</h1>
       <form onSubmit={handleSave} className={styles.form}>
@@ -59,6 +78,7 @@ export default function ProfilePage() {
         <input name="pincode" value={formData.pincode} onChange={handleChange} placeholder="Pincode" className={styles.input} />
         <button type="submit" className={styles.button}>Save Profile</button>
       </form>
+    </div>
     </div>
   );
 }
