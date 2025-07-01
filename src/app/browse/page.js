@@ -1,9 +1,15 @@
+'use client';
 import React from 'react'
 import Navbar from "@/components/Navbar";
 import Footer from '@/components/Footer';
 import BrowseHero from '@/components/BrowseHero';
 import TagFilterSection from '@/components/TagFilterSection';
-import FullMapView from '@/components/FullMapView';
+import dynamic from 'next/dynamic';
+
+const FullMapView = dynamic(() => import('@/components/FullMapView'), {
+  ssr: false, // ⛔ disables server-side rendering for this component
+});
+
 import propertyData from '@/data/main_data_with_coords.json';
 
 function Browse() {

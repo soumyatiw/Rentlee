@@ -1,14 +1,27 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+
 import styles from './FullMapView.module.css';
 import { MapPin } from 'lucide-react';
+import pinIcon from '@/assets/pin.svg'; // ✅ SVG icon
+
+// ✅ Create custom Leaflet icon using your SVG
+const customIcon = new L.Icon({
+  iconUrl: pinIcon.src,
+  iconSize: [32, 42],
+  iconAnchor: [16, 42],
+  popupAnchor: [0, -36],
+  shadowUrl: null, // optional: no shadow
+});
 
 export default function FullMapView({ properties }) {
   const [selectedCoords, setSelectedCoords] = useState(null);
 
-  // Group properties by lat/lng key
+  // ✅ Group properties by lat,lng to avoid overlapping markers
   const grouped = useMemo(() => {
     const map = {};
     properties.forEach((prop) => {
@@ -37,6 +50,7 @@ export default function FullMapView({ properties }) {
             <Marker
               key={idx}
               position={[lat, lng]}
+              icon={customIcon} // ✅ Custom SVG icon
               eventHandlers={{
                 click: () => setSelectedCoords(key),
               }}
