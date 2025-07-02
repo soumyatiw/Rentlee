@@ -7,7 +7,7 @@ import TagFilterSection from '@/components/TagFilterSection';
 import dynamic from 'next/dynamic';
 
 const FullMapView = dynamic(() => import('@/components/FullMapView'), {
-  ssr: false, // ⛔ disables server-side rendering for this component
+  ssr: false, 
 });
 
 import propertyData from '@/data/main_data_with_coords.json';
