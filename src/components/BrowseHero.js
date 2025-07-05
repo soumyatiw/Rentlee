@@ -7,7 +7,7 @@ import bheroImage from '@/assets/browsehero.png';
 import propertiesData from '@/data/main_data.json';
 import { useRouter } from 'next/navigation';
 import { useAuthContext } from '@/context/AuthContext';
-import { MapPin, Building2, IndianRupee, BedDouble, Bath, Ruler, Sofa, CalendarDays, Search, X ,Phone, LogIn} from 'lucide-react';
+import { MapPin, Building2, IndianRupee, BedDouble, Bath, Ruler, Sofa, CalendarDays, Search, X, Phone, LogIn } from 'lucide-react';
 import Link from 'next/link';
 
 export default function BrowseHero() {
@@ -106,7 +106,7 @@ export default function BrowseHero() {
       </div>
 
       <div className={styles.right}>
-        <Image src={bheroImage} alt="Hero" className={styles.imagePlaceholder} />
+        <Image data-aos="fade-up" data-aos-duration="2000" src={bheroImage} alt="Hero" className={styles.imagePlaceholder} />
       </div>
 
       {showPopup && (
