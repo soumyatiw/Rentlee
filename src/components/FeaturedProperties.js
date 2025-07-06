@@ -51,7 +51,7 @@ const FeaturedProperties = () => {
         ))}
       </div>
 
-      <Link href="/browse" className={styles.browseAllBtn}>
+      <Link href="/browse" className={styles.browseAllBtn} data-aos="fade-up" data-aos-duration="2000">
         Browse All Properties
       </Link>
 

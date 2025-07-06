@@ -1,166 +1,11 @@
 const blogPosts = [
-  {
-    id: "rental-tips-budget-2025",
-    title: "Top 10 Budget-Friendly Rental Tips for 2025",
-    description: "Learn how to save on rent and still get the best property.",
-    author: "Soumya Tiwari",
-    date: "2025-07-01",
-    image: "/images/blog/budget-tips.jpg",
-    content: `
-      In 2025, renting smart means being aware of your finances and your needs. The rental market in India is becoming more dynamic with digital platforms, changing tenant expectations, and increasing transparency.
-
-      1. **Plan your budget in detail**: Start with your monthly income. Subtract fixed costs like groceries, transport, and savings. Whatever is left is your rent capacity. Ideally, rent should not exceed 30% of your income.
-
-      2. **Don’t be lured by flashy photos**: Always verify properties through virtual or physical tours. Rentlee offers 360° verified tours on many listings.
-
-      3. **Look into suburbs or metro extensions**: Cities like Bengaluru, Pune, and Hyderabad have seen major rent drops in outskirts, thanks to metro line expansions.
-
-      4. **Negotiate, especially during off-season**: Between Jan-March, many landlords are willing to drop prices or offer extra benefits like free internet or waived deposits.
-
-      5. **Don’t ignore hidden costs**: Always ask about maintenance, society charges, electricity capping (especially in PGs), and furnishing conditions.
-
-      6. **Explore co-living options**: If you’re a student or early professional, co-living is cost-effective and hassle-free. Platforms like Rentlee allow filtering based on co-living preferences.
-
-      7. **Secure rental agreements**: A proper rental agreement safeguards your deposit and terms. Rentlee allows digital signing for safe record keeping.
-
-      8. **Choose semi-furnished over fully furnished**: You can often rent cheaper and buy basic furniture online with discounts instead of paying premium rents.
-
-      9. **Ask the neighbors**: Before finalizing, casually ask other residents about water issues, power cuts, internet quality, etc.
-
-      10. **Be ready to move fast**: Good rentals go quickly. Keep soft copies of your documents ready to submit when you spot your perfect place.
-
-      At Rentlee, our mission is to make renting more transparent, smarter, and safe. Our AI-based match system helps you discover properties that match your budget, lifestyle, and commuting needs.
-
-      **Remember**: A good rental is not about price alone—it's about convenience, neighborhood, security, and clarity. Spend time browsing, ask questions, and choose smartly.
-    `
-  },
-  {
-  id: "first-time-tenant-guide",
-  title: "First-Time Tenant Guide: Do's and Don'ts",
-  description: "Essential things every first-time renter in India must know.",
-  author: "Amit Raj",
-  date: "2025-06-27",
-  image: "/images/blog/tenant-guide.jpg",
-  content: `
-    Renting your first property in 2025 can be exciting—but also overwhelming if you’re not prepared.
-    With changing regulations and online platforms, understanding the process before you begin will help you avoid common mistakes and feel more confident.
-
-    ## Step-by-Step Guide for First-Time Tenants
-
-    ### 1. Understand Your Needs
-    Before browsing properties, make a list of what matters most: proximity to college or workplace, budget, number of bedrooms, and required amenities (e.g., parking, internet, furnished).
-
-    ### 2. Set a Realistic Budget
-    Ideally, your rent should be no more than 25–30% of your monthly income. Also account for:
-    - Security deposit (usually 1–3 months’ rent)
-    - Brokerage fees (if any)
-    - Monthly utilities and maintenance
-
-    ### 3. Explore Verified Platforms
-    Avoid random Facebook groups or unverified classifieds. Platforms like Rentlee offer verified listings, secure messaging, and digital agreements.
-
-    ### 4. Property Visits & Inspections
-    Always inspect:
-    - Water pressure
-    - Electrical fittings
-    - Internet availability
-    - Natural light
-    - Neighbors and noise levels
-
-    Take photos during your visit so you can review later and have evidence of the property’s condition.
-
-    ### 5. Understand the Rent Agreement
-    Read the agreement thoroughly. Key things to check:
-    - Lock-in period (minimum stay duration)
-    - Notice period for vacating (usually 1 month)
-    - Maintenance and repair clauses
-    - Visitor rules (some societies limit guests)
-
-    Avoid verbal promises. Insist that all terms (painting, furniture, appliances) be mentioned in the agreement.
-
-    ### 6. Keep Copies & Receipts
-    Always:
-    - Get a signed rent agreement
-    - Ask for rent payment receipts
-    - Maintain email or chat records with your landlord
-
-    ### 7. Don’t Hesitate to Ask Questions
-    If you feel unsure about a clause, ask the landlord or consult a friend. It's your right as a tenant to understand what you're signing.
-
-    ## Bonus Tips
-    - Avoid cash payments.
-    - Choose apartments with active Resident Welfare Associations (RWAs).
-    - If you’re moving in with roommates, ensure everyone signs the agreement.
-
-    Renting your first home is a milestone. Make it smooth and secure by being informed and using the right tools.
-    Rentlee is designed to assist first-time renters by offering smart search tools, verified listings, and agreement templates that protect you.
-
-    Happy renting!
-  `
-},
-{
-  id: "pg-vs-apartment-2025",
-  title: "PG vs Apartment in 2025: What’s Best for You?",
-  description: "Confused between a Paying Guest (PG) accommodation and an apartment? Here's a detailed comparison to help you decide.",
-  author: "Sneha Kapoor",
-  date: "2025-06-18",
-  image: "/images/blog/pg-vs-apartment.jpg",
-  content: `
-    If you're moving to a new city for work or education, one of the first big decisions you'll face is: **Should I go for a PG (Paying Guest) or rent an apartment?**
-    In 2025, the lines between these two options have blurred a little — thanks to co-living startups and flexible rental platforms like Rentlee — but the choice still depends heavily on your lifestyle, budget, and preferences.
-
-    ## What is a PG?
-    A Paying Guest accommodation is typically a room in someone’s home or a shared property where tenants (usually students or working professionals) pay rent to stay, often with food and housekeeping included.
-
-    ## What is an Apartment?
-    Renting an apartment means you lease the entire flat (either solo or with roommates), and take responsibility for rent, bills, and maintenance yourself.
-
-    ## Key Comparison Table
-
-    | Factor              | PG Accommodation         | Apartment Rental          |
-    |---------------------|---------------------------|----------------------------|
-    | Privacy             | Low to Moderate           | High                       |
-    | Flexibility         | Higher (monthly terms)     | Moderate to low (lock-in) |
-    | Cost                | Usually lower              | Higher upfront cost        |
-    | Furnishing          | Fully furnished            | Depends (can vary)         |
-    | Food & Services     | Often included             | Not included               |
-    | Visitors Allowed?   | Often restricted           | Usually flexible           |
-    | Ideal For           | Students, Freshers         | Families, Working pros     |
-
-    ## Things to Consider
-
-    ### 1. **Your Budget**
-    PGs generally cost between ₹5,000–₹15,000/month depending on city and amenities. Apartments might cost ₹10,000–₹40,000/month plus deposit and utilities.
-
-    ### 2. **Lifestyle Preferences**
-    - Need privacy or work from home? Apartment wins.
-    - Want meals and laundry included? PG may suit you better.
-    - Introverted or night owl? PG rules might frustrate you.
-
-    ### 3. **Duration of Stay**
-    PGs often offer flexible stays of 1–3 months. Most apartments require a **lock-in period** of 6–11 months.
-
-    ### 4. **Who You’re Living With**
-    In PGs, you often share space with strangers or multiple people. In apartments, you choose your own roommates — or live alone if you can afford it.
-
-    ## The 2025 Twist: Co-Living
-    Co-living spaces (like Stanza, Zolo, Settl) offer a hybrid: fully furnished apartments with services like a PG but freedom like an apartment. These are a good middle ground for Gen Z and young professionals.
-
-    ## Final Word
-    There's no one-size-fits-all answer. Here's a quick cheat:
-    - For short-term stays, tight budgets, and convenience → Choose a **PG**.
-    - For privacy, freedom, and long-term comfort → Go for an **Apartment**.
-
-    Rentlee supports both options — browse verified PGs and apartments in your city, apply filters, and chat with landlords directly. Happy renting!
-  `
-},
 {
   id: "rental-scams-india-protection",
   title: "Rental Scams in India and How Rentlee Protects You",
   description: "Stay safe while renting online. Here's how to identify scams and how Rentlee ensures your protection.",
   author: "Priya Nair",
   date: "2025-06-15",
-  image: "/images/blog/scam-alert.jpg",
+  image: "https://www.cbtks.com/images/default-source/background/rental-scam.jpg?sfvrsn=ad82056d_1",
   content: `
 ## Rental Scams Are On the Rise in India
 
@@ -240,7 +85,7 @@ With Rentlee's safety features and your awareness, finding a secure and comforta
   description: "Know your legal rights as a tenant before signing a rent agreement in India.",
   author: "Adv. Rohan Mehta",
   date: "2025-06-10",
-  image: "/images/blog/tenant-rights.jpg",
+  image: "https://img.staticmb.com/mbcontent/images/crop/uploads/2022/12/Rental-Agreement-for-a-House-for-Rent_0_1200.jpg.webp",
   content: `
 ## 🏛️ Why You Must Know Your Rights as a Tenant
 
@@ -325,7 +170,7 @@ Rentlee is proud to simplify rental laws for you. We’re here not just to help 
   description: "Protect yourself from surprises — ask these 10 questions before finalizing any rental property.",
   author: "Karan Desai",
   date: "2025-06-05",
-  image: "/images/blog/lease-questions.jpg",
+  image: "https://www.brookings.edu/wp-content/uploads/2024/03/HousingFacts_Shutterstock_2409424327.jpg?quality=75&w=1500",
   content: `
 ## 🤔 Why Ask Questions Before Signing a Lease?
 
@@ -449,7 +294,7 @@ Rentlee encourages every tenant to be informed and confident before committing t
   description: "From digital contracts to smart rentals, discover how India's rental landscape will transform by 2030.",
   author: "Ananya Verma",
   date: "2025-06-01",
-  image: "/images/blog/future-renting.jpg",
+  image: "https://media.istockphoto.com/id/1460658780/photo/for-rent-sign-in-front-of-house.jpg?s=612x612&w=0&k=20&c=CmD-ghiYZZ50pqpqZj1FMPm5o5TRm8Y51pLwhffgom8=",
   content: `
 ## 🏙️ Renting in India Is Changing Fast
 
@@ -570,7 +415,7 @@ Get ready to swipe right on the future of renting.
   description: "College students, this one's for you — everything you need to know before choosing a PG or apartment in a new city.",
   author: "Soumya Tiwari",
   date: "2025-05-28",
-  image: "/images/blog/student-rentals.jpg",
+  image: "https://t3.ftcdn.net/jpg/09/19/69/54/360_F_919695407_T5tHZHjoztEc04rBaLYYolrucRdQKDw4.jpg",
   content: `
 ## 🎓 Starting College? Time to Find a Home Away From Home
 
@@ -676,7 +521,7 @@ Your college years shape your future. Make sure your living space supports your 
   description: "Be prepared before you visit a landlord. Here’s a complete checklist of documents required for renting in India.",
   author: "Rohit Sen",
   date: "2025-05-25",
-  image: "/images/blog/rent-documents.jpg",
+  image: "https://bsmedia.business-standard.com/_media/bs/img/article/2021-06/04/full/1622807499-3632.jpg?im=FeatureCrop,size=(826,465)",
   content: `
 ## 🗂️ Paperwork Before Possession: Why It Matters
 
@@ -766,11 +611,11 @@ Having your documents ready not only speeds up the process but also builds **tru
 },
 {
   id: "rental-agreement-clauses-guide",
-  title: "Rental Agreement Explained: Clauses Every Tenant Should Understand",
+  title: "Rental Agreement Explained: Every Tenant Should Understand",
   description: "Avoid surprises by understanding these essential clauses before signing your rental agreement.",
   author: "Adv. Ritu Malhotra",
   date: "2025-05-20",
-  image: "/images/blog/rental-agreement.jpg",
+  image: "https://plus.unsplash.com/premium_photo-1661754912055-05f3dfa8c48e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVudGFsJTIwaG91c2V8ZW58MHx8MHx8fDA%3D",
   content: `
 ## 📝 What Is a Rental Agreement?
 
@@ -884,7 +729,7 @@ Be smart. Be legal. Be protected — with Rentlee.
   description: "Yes, you can negotiate rent! Here's how to do it confidently, respectfully, and effectively.",
   author: "Neha Kapoor",
   date: "2025-05-15",
-  image: "/images/blog/rent-negotiation.jpg",
+  image: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202502/it-is-not-recommended-to-take-out-a-large-loan-to-purchase-a-house--as-the-cost-of-rent-is-significa-223930228-16x9.jpg?VersionId=k7SxHCCYkEjWVZHI.jI4GaafHC1usPvW&size=690:388",
   content: `
 ## 🤝 Why Negotiating Rent Is Normal (and Smart)
 
@@ -994,7 +839,7 @@ Rentlee supports transparent, respectful deals — and we encourage you to alway
   description: "Explore India’s most renter-friendly cities for students, professionals, and families.",
   author: "Arjun Rao",
   date: "2025-05-10",
-  image: "/images/blog/top-cities.jpg",
+  image: "https://blog.taxact.com/wp-content/uploads/Tax-Implications-of-Owning-Rental-Property-624012103_Blog.jpg",
   content: `
 ## 🏙️ Choosing the Right City to Rent In
 
@@ -1124,7 +969,7 @@ Happy Renting 🚀
   description: "Living with roommates? Here's how to divide rent and expenses without drama.",
   author: "Tanvi Joshi",
   date: "2025-05-05",
-  image: "/images/blog/roommate-budget.jpg",
+  image: "https://lplawyersfirm.com/wp-content/uploads/2025/04/rental-income-tax.jpg",
   content: `
 ## 👯‍♂️ Roommates: A Blessing or a Budget Nightmare?
 
@@ -1240,7 +1085,7 @@ From Team Rentlee 🤝
   description: "Rental fraud is real. Here’s how Rentlee ensures that every property you browse is real, safe, and verified.",
   author: "Priya Nair",
   date: "2025-05-01",
-  image: "/images/blog/property-verification.jpg",
+  image: "https://ik.imagekit.io/livlabs/ik-seo/pma/assets/13-keys-of-rental-success_f765YV99T/httpsikimagekitiolivlabspmaassets13-keys-of-rental-successf765yv99twebp.webp?tr=w-auto,dpr-auto",
   content: `
 ## 🛡️ Why Property Verification Is More Important Than Ever
 
@@ -1342,11 +1187,11 @@ Browse verified listings. Talk to real people. And rent smart — with Rentlee.
 },
 {
   id: "furnished-vs-unfurnished-guide",
-  title: "Should You Choose a Furnished, Semi-Furnished or Unfurnished Flat?",
+  title: "You Choose a Furnished, Semi-Furnished or Unfurnished Flat?",
   description: "Understand the pros, cons, and hidden costs of each rental option before signing a lease.",
   author: "Soumya Tiwari",
   date: "2025-04-28",
-  image: "/images/blog/furnishing-types.jpg",
+  image: "https://img.etimg.com/thumb/width-1600,height-900,imgsize-36934,resizemode-75,msid-55260495/wealth/earn/why-you-should-think-twice-before-investing-for-rental-income.jpg",
   content: `
 ## 🪑 What's in a Flat? Everything.
 
@@ -1462,7 +1307,7 @@ Take a moment to assess:
   description: "Monthly rent isn’t your only expense. Understand the full picture before signing that agreement.",
   author: "Rishi Kumar",
   date: "2025-04-25",
-  image: "/images/blog/hidden-rental-costs.jpg",
+  image: "https://media.vyaparify.com/vcards/blogs/109966/Rent-1.jpg",
   content: `
 ## 💰 More Than Just Rent: The Full Picture
 
@@ -1596,7 +1441,7 @@ With Rentlee.
   description: "Learn how to identify red flags, avoid scams, and protect yourself while browsing properties online.",
   author: "Anika Sen",
   date: "2025-04-20",
-  image: "/images/blog/fake-listing-warning.jpg",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyrf9d6lp2Y07lWmKM7BsXe9EbF5iRdND88A&s",
   content: `
 ## 🚨 The Rise of Rental Scams in India
 
@@ -1726,7 +1571,7 @@ Let’s beat the scammers. Together.
   description: "Don’t move in blindly! Follow this essential checklist to avoid surprises and save money.",
   author: "Soumya Tiwari",
   date: "2025-04-15",
-  image: "/images/blog/move-in-checklist.jpg",
+  image: "https://coloradoestateplan.com/wp-content/uploads/2024/12/Gift-Rental-Property-to-Your-Child.jpg",
   content: `
 ## 📦 Ready to Move Into a New Rental? Read This First.
 
@@ -1860,7 +1705,7 @@ With Rentlee, you're not just renting — you're moving in smart.
   description: "Confused between renting a PG or a flat? Here's a detailed comparison to help you make the right decision.",
   author: "Rishi Kumar",
   date: "2025-04-10",
-  image: "/images/blog/pg-vs-flat.jpg",
+  image: "https://images.cnbctv18.com/uploads/2024/09/shutterstock-2478596395-2024-09-a88787f26224658b106f8d1e55c52554-scaled.jpg?impolicy=website&width=400&height=225",
   content: `
 ## 🛏️ PG or 🏠 Flat: What’s Right for You?
 
@@ -1966,7 +1811,7 @@ Start your rental journey the right way — with **Rentlee**, where verified lis
   description: "Looking for budget-friendly places to live? These Indian cities offer low rent, great amenities, and high livability.",
   author: "Soumya Tiwari",
   date: "2025-04-05",
-  image: "/images/blog/affordable-cities.jpg",
+  image: "https://thumbs.dreamstime.com/b/lease-rental-selling-home-real-estate-agent-manager-holding-key-new-owner-rent-house-sales-loan-credit-financial-insurance-373775986.jpg",
   content: `
 ## 🇮🇳 Budget-Friendly Indian Cities to Rent In (Updated for 2025)
 
