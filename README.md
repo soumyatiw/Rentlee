@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  Rentlee — Smart Rental Discovery Platform
 
-## Getting Started
+Welcome to **Rentlee**, your modern platform to discover, explore, and manage rental properties with ease. This project is built using **Next.js** and focuses on intuitive UI, real-time search, blog insights, and responsive design tailored for renters and property seekers.
 
-First, run the development server:
+![Rentlee Screenshot](https://rentlee-soumya.vercel.app/og-preview.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Live Demo
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+[https://rentlee-soumya.vercel.app](https://rentlee-soumya.vercel.app)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+### Core Pages
+- **Home**: Search bar with quick preview, CTA buttons, and featured cities.
+- **Browse**: 
+  - Advanced search by location, price, type, and beds.
+  - Tag filters like `Popular`, `Apartment`, `Houses`, etc.
+  - Full-screen modal results with login check.
+  - Leaflet Map integration to locate properties.
+- **Blog**:
+  - Blog cards from dynamic JSON data (`BlogData.js`)
+  - Full-page blog preview in markdown popup.
+  - Searchable by title.
+- **About**:
+  - Hero section with mission buttons
+  - Our Story with timeline
+  - Mission & Values cards
+  - Leadership Team
+  - Contact form with address and social icons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##  Tech Stack
 
-## Deploy on Vercel
+- **Frontend**: Next.js 14, React, HTML5, CSS3 (No Tailwind)
+- **Styling**: Vanilla CSS Modules
+- **Markdown**: `react-markdown`, `remark-gfm`, `rehype-raw`
+- **Icons**: `react-icons`, `lucide-react`
+- **Hosting**: [Vercel](https://vercel.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##  Project Structure
+
+rentlee/
+├── public/
+│ └── images, logo, icons
+├── src/
+│ ├── app/
+│ │ ├── page.js (Home)
+│ │ ├── browse/page.js
+│ │ ├── blog/page.js
+│ │ └── about/page.js
+│ ├── components/
+│ │ ├── Navbar, Footer, BlogHeroSection, BlogCard
+│ │ ├── BrowseHero, SearchFilter, MapView
+│ │ └── AboutHero, MissionSection, TeamSection, ContactForm
+│ ├── data/
+│ │ ├── main_data.json
+│ │ └── BlogData.js
+│ └── assets/
+│ └── logo.png, hero images, etc.
+
+---
+
+
+
+##  Future Enhancements
+
+- Add backend integration for real listings (e.g. Supabase / Firebase)
+- Save favorites and contact landlord
+- Admin dashboard to post new properties
+- SEO-friendly blog routing
+
+  
+Developed By
+**Soumya Tiwari**
+B.Tech CSE and DS, Newton School of Technology, Rishihood University
+
+License
+This project is licensed under the MIT License — feel free to use and build upon it!
+
