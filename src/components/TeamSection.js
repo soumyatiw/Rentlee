@@ -53,7 +53,7 @@ export default function TeamSection() {
         Our diverse team brings together expertise from real estate, technology, and customer service to create the best rental experience possible.
       </p>
 
-      <div className={styles.cardGrid}>
+      <div className={styles.cardGrid} data-aos="fade-up" data-aos-duration="2000">
         {teamMembers.map((member, index) => (
           <div className={styles.card} key={index}>
             <div className={styles.imageWrapper}>

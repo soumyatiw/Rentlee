@@ -3,13 +3,19 @@
 import styles from './AboutPage.module.css';
 import Image from 'next/image';
 import storyImage from '@/assets/about-page.png';
+import TeamSection from '@/components/TeamSection';
+
 
 import { FaHandshake, FaLightbulb, FaUsers } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 
 export default function AboutHeroSection() {
     return (
         <section className={styles.Wrapper}>
+
+            {/* Hero Section */}
+
             <section className={styles.hero}>
                 <div className={styles.left}>
                     <h1 className={styles.title}>
@@ -25,6 +31,9 @@ export default function AboutHeroSection() {
                     </div>
                 </div>
             </section>
+
+            {/* Story Section */}
+
             <section className={styles.story} >
                 <h2 className={styles.heading}>Our Story</h2>
                 <p className={styles.subtext}>
@@ -63,6 +72,9 @@ export default function AboutHeroSection() {
                     </div>
                 </div>
             </section>
+
+            {/* Mission Section */}
+
             <section className={styles.missionSection} id="mission">
                 <h2 className={styles.heading}>Our Mission & Values</h2>
                 <p className={styles.subheading}>
@@ -102,6 +114,62 @@ export default function AboutHeroSection() {
                 </div>
             </section>
 
+            {/* Team Section */}
+
+            <TeamSection />
+
+            {/* Contact Us Section */}
+            <section className={styles.contactSection}>
+                <div className={styles.Mleft}>
+                    <h2 className={styles.Mheading}>Get In Touch</h2>
+                    <p className={styles.subtext}>
+                        Have questions about Rentlee? Our team is here to help. Reach out to us through any of the channels below.
+                    </p>
+
+                    <div className={styles.infoItem}>
+                        <span className={styles.iconCircle}><FaMapMarkerAlt /></span>
+                        <div className={styles.infoContent}>
+                            <strong className={styles.infoTitle}>Headquarters</strong>
+                            <p>2329 Rentlee Town, Karol Bagh, Delhi 110094</p>
+                        </div>
+                    </div>
+
+                    <div className={styles.infoItem}>
+                        <span className={styles.iconCircle}><FaEnvelope /></span>
+                        <div className={styles.infoContent}>
+                            <strong className={styles.infoTitle}>Email</strong>
+                            <p>rentfromrentlee@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div className={styles.infoItem}>
+                        <span className={styles.iconCircle}><FaPhone /></span>
+                        <div className={styles.infoContent}>
+                            <strong className={styles.infoTitle}>Phone</strong>
+                            <p>+91 7495042431</p>
+                        </div>
+                    </div>
+
+                    <p className={styles.infoTitle}>Follow Us</p>
+                    <div className={styles.socialIcons}>
+                        <span className={styles.iconCircle}><FaFacebookF /></span>
+                        <span className={styles.iconCircle}><FaTwitter /></span>
+                        <span className={styles.iconCircle}><FaInstagram /></span>
+                        <span className={styles.iconCircle}><FaLinkedinIn /></span>
+                    </div>
+                </div>
+
+                <div className={styles.Mright}>
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name" />
+                        <input type="email" placeholder="Email Address" />
+                        <input type="text" placeholder="Subject" />
+                        <textarea placeholder="Your message here..."></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
         </section>
     );
 }
