@@ -2,10 +2,6 @@
 
 Welcome to **Rentlee**, your modern platform to discover, explore, and manage rental properties with ease. This project is built using **Next.js** and focuses on intuitive UI, real-time search, blog insights, and responsive design tailored for renters and property seekers.
 
-![Rentlee Screenshot](https://rentlee-soumya.vercel.app/og-preview.png)
-
----
-
 ## Live Demo
 
 [https://rentlee-soumya.vercel.app](https://rentlee-soumya.vercel.app)
@@ -43,30 +39,6 @@ Welcome to **Rentlee**, your modern platform to discover, explore, and manage re
 - **Hosting**: [Vercel](https://vercel.com/)
 
 ---
-
-##  Project Structure
-
-rentlee/
-├── public/
-│ └── images, logo, icons
-├── src/
-│ ├── app/
-│ │ ├── page.js (Home)
-│ │ ├── browse/page.js
-│ │ ├── blog/page.js
-│ │ └── about/page.js
-│ ├── components/
-│ │ ├── Navbar, Footer, BlogHeroSection, BlogCard
-│ │ ├── BrowseHero, SearchFilter, MapView
-│ │ └── AboutHero, MissionSection, TeamSection, ContactForm
-│ ├── data/
-│ │ ├── main_data.json
-│ │ └── BlogData.js
-│ └── assets/
-│ └── logo.png, hero images, etc.
-
----
-
 
 
 ##  Future Enhancements
