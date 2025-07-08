@@ -159,21 +159,21 @@
     margin-bottom: 24px;
 }
 
-.markdownParagraph {
+.ReactMarkdown p {
     font-size: 16px;
     color: #333;
     margin-bottom: 16px;
     line-height: 1.8;
 }
 
-.markdownHeading {
+.ReactMarkdown h1 {
     font-size: 20px;
     font-weight: bold;
     margin: 24px 0 12px;
     color: #292966;
 }
 
-.markdownListItem {
+.ReactMarkdown li {
     margin-left: 20px;
     list-style-type: disc;
     font-size: 15px;
@@ -181,7 +181,7 @@
     line-height: 1.6;
 }
 
-.markdownStrong {
+.ReactMarkdown strong {
     font-weight: 700;
     color: #292966;
 }

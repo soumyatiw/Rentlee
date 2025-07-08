@@ -63,13 +63,7 @@ export default function BlogPage() {
                         <ReactMarkdown
                             remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeRaw]}
-                            components={{
-                                h1: ({ node, ...props }) => <h1 className={styles.markdownHeading} {...props} />,
-                                h2: ({ node, ...props }) => <h2 className={styles.markdownHeading} {...props} />,
-                                p: ({ node, ...props }) => <p className={styles.markdownParagraph} {...props} />,
-                                li: ({ node, ...props }) => <li className={styles.markdownListItem} {...props} />,
-                                strong: ({ node, ...props }) => <strong className={styles.markdownStrong} {...props} />,
-                            }}
+                            
                         >
                             {selectedPost?.content || ""}
                         </ReactMarkdown>
