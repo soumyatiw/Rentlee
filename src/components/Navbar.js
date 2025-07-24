@@ -1,5 +1,3 @@
-// Final step: Navbar dropdown toggle logic (add to Navbar.jsx)
-
 'use client';
 
 import Link from 'next/link';
