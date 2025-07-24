@@ -99,7 +99,7 @@ export default function BrowseHero() {
             </select>
           </div>
 
-          <button className={styles.field} type="submit">
+          <button className={styles.button} type="submit">
             <Search size={16} style={{ marginRight: 8 }} /> Search Properties
           </button>
         </form>
