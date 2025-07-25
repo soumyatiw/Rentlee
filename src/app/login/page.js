@@ -45,6 +45,10 @@ export default function LoginPage() {
         />
 
         <button type="submit" className={styles.button}>Login</button>
+
+        <p className={styles.signupText}>
+          Don’t have an account? <a href="/signup" className={styles.signupLink}>Sign up</a>
+        </p>
       </form>
     </div>
   );
